@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+<!--
+ Importamos a biblioteca jQuery, que é uma dependência dos recursos JavaScript do Materialize. Portanto, é fundamental que essa linha apareça antes da importação do arquivo .js do framework (linha 6);
+
+ Linha 07: Importamos o arquivo JavaScript do Materialize, importante para garantir o funcionamento de alguns recursos, como o menu responsivo que veremos mais adiante.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<!--Código JavaScript para ativar o menu lateral responsivo
+	Linha 3: A função sideNav() fará com que o botão com a classe button-collapse atue de forma a expandir o menu lateral.-->
+	<script>
+		$(function(){
+			$(".button-collapse").sideNav();
+		});
+	</script>
+	<body>
+
+		<!--menu lateral para mobile-->
+		<!--Linhas 26 a 36: Lista de links que serão posicionados no lado direito (classe right) da navbar. A classe hide-on-med-and-down fará com que esses links sejam ocultados em tablets e dispositivos menores.-->
+		<nav id="menu">
+			<div class="nav-wrapper">
+				<span class="menu_2">
+					<a href="index.html" class="brand-logo">Casa Bem estar</a>
+					<a href="#" data-activates="menu-mobile" class="button-collapse">
+						<i class="material-icons">menu</i>
+					</a>
+				</span>
+		<!--Esse link, que contém um ícone de menu hambúrguer, será exibido quando a página for visualizada em uma tela pequena. O atributo data-activates aponta para o id da tag ul definida logo abaixo e que representa o menu lateral;
+
+			Adicionamos novamente a lista de links, mas agora com a classe side-nav, que representa o menu lateral a ser exibido no modo mobile.-->
+			<ul class="right hide-on-med-and-down">   
+				<li><a href="#">INÍCIO</a></li>
+				<li><a href="#">QUEM SOMOS</a></li>
+				<li><a href="#">LOCALIZAÇÃO</a></li>
+				<li><a href="#">CONTATO</a></li>
+			</ul>
+
+			<ul class="side-nav" id="menu-mobile">
+				<li><a href="#">INÍCIO</a></li>
+				<li><a href="#">QUEM SOMOS</a></li>
+				<li><a href="#">LOCALIZAÇÃO</a></li>
+				<li><a href="#">CONTATO</a></li>
+			</ul>
+		</div>
+	</nav>
+<!-- Carousel
+	================================================== -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img style="width:100%" class="first-slide" src="img/banner_1.png" alt="First slide">
+
+			</div>
+			<div class="item">
+				<img style="width:100%" class="second-slide" src="img/banner_3.png" alt="Second slide">
+
+			</div>
+			<div class="item">
+				<img style="width:100%" class="third-slide" src="img/banner_2.png" alt="Third slide">
+
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	<!--fim carousel -->
+	<div class="row"   id="1">
+		<div class="col-md-12"><h1></h1></div>
+	</div>
+
+
+	<div calss="row">
+
+		<div class="col-md-12">
+			<h3 id="titu_serv">Principais Serviços</h3>
+		</div>
+	</div>
+
+	<div class="row"  id="servicos" >
+		<div class="col-md-4" id="for_filho">
+			<h4 class="titulo_filho">Drenagem linfática</h4>
+
+			<p>A drenagem linfática é uma técnica de massagem que trabalha o sistema linfático,
+				estimulando-o a trabalhar de forma rápida, movimentando a linfa até os gânglios linfáticos.
+				Essa técnica foi desenvolvida em 1932 pelo terapeuta dinamarquês Vodder e sua esposa e,
+				posteriormente, foi aprimorada, tornando-se popular.
+				A linfa é o líquido existente nos vasos dos gânglios linfáticos. 
+				É caracterizada por sua viscosidade, ausência de cor, 
+				por conter substâncias orgânicas e inorgânicas, resíduos e toxinas.
+				A linfa é o líquido existente nos vasos dos gânglios linfáticos. 
+				É caracterizada por sua viscosidade, ausência de cor, 
+			por conter substâncias orgânicas e inorgânicas, resíduos e toxinas.</p>
+			<img src="img/banner3.jpg" class="img-responsive" alt="Responsive image">
+
+		</div>
+		<div class="col-md-4" id="for2_filho">
+			<h4 class="titulo_filho">Fisíoterapia</h4>
+
+			<p>A fisioterapia é uma reabilitação que ajuda a fortalecer ossos e os músculos para que as pessoas possam voltar a andar ou recuperar movimentos que por algum acidente, 
+				ou doença tenham perdido, a fisioterapia também é indicado para pessoas de idades
+				para que elas possam ter uma boa qualidade de vida, e também não percam movimentos que com a idade é normal perder.
+				Também ajuda na reabilitação de fraturas de atletas para que eles possam fortalecer os seus músculos e voltar as atividades em pouco tempo, porém a mesma tem um auto 
+			custo e algumas pessoas podem não ter condições de pagar, por isso que alguns postos de saúde oferecem o tratamento gratuitamente.</p>
+			<img src="img/banner2.jpg" class="img-responsive" alt="Responsive image">
+
+		</div>
+		<div class="col-md-4" id="for_filho">
+			<h4 class="titulo_filho">Massioterapia</h4>
+
+			<p>As massagens, além de nos beneficiarem em termos estéticos e relaxantes, podem servir como aliadas em tratamentos relacionados à saúde.
+				A massoterapia é uma técnica que consiste em um conjunto de toques exercidos com as mãos ou outras partes do corpo e aparelhos sobre determinadas regiões.
+				Indicada para aliviar dores, diminuir o estresse e a tensão, controlar as dores musculares, eliminar traumas e estimular a circulação sanguínea, as massagens precisam ser feitas por especialistas e,antes de iniciar um tratamento, o profissional deve indicar a melhor técnica para o caso.
+			Essa é uma das grandes diferenças entre a massoterapia e a massagem comum. .</p>
+			<img src="img/banner.jpg" class="img-responsive" alt="Responsive image">
+
+		</div>
+	</div>
+	<!--sobre-->
+
+
+
+	<div class="col-md-12 col-sm-12" id="sobre">
+		<div class="col-md-6 col-md-offset-3 col-sm-12">
+			
+			<h3 id="sobre_titu">Casa Bem estar</h3>
+			<hr>
+			<img src="img/s1.jpg" class="img-responsive" alt="coração">
+			<p id="texto"><b>	
+
+
+			A CASA BEM ESTAR</b> trás um olhar diferente para a saúde acolhento os clientes e espelhando o que há de mas profundo:
+			o corpo que funciona em todas sua potência e harmonia. Aqui voçe estímula e conhece seu corpo atrsvés da sensação,respiração,
+			percepção interiorização e descobre movimentos e partes do seu corpo que antes estavam adormecidos!
+			<b>NOSSA INTENÇÃO É IMPRIMIR UMA NOVA FORMA DE SENTIR O CORPO,REPROGRAMAR E REDESCOBRIR OS MOVIMENTOS DO CORPO COM PRAZER
+				E ALEGRIA DE SER.Volte para casa.Oseu corpo é sua <b>Casas!</b></p></b>
+
+			</p>
+		</div>
+		<!--o que oferecemos-->
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<h4 class="titu_direita">Missão</h4>
+						<img src="https://img.icons8.com/dotty/80/000000/goal.png"/>
+						<div class="caption">
+
+							<p class="texto_direita">Preservar a saúde e a qualidade de vida das pessoas, a partir de um atendimento profissional,
+							ético, humano e personalizado</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<h4 class="titu_direita">Visão</h4>
+						<img src="https://img.icons8.com/dotty/80/000000/teamwork.png"/>
+						<div class="caption">
+
+							<p class="texto_direita">Gerar valor para nossos clientes, acionistas, equipes e a sociedade, 
+							atuando de forma sustentável.</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<h4 class="titu_direita">Valores</h4>
+						<img src="https://img.icons8.com/dotty/80/000000/business-conference-female-speaker--v2.png"/>
+						<div class="caption">
+
+							<p id="3" class="texto_direita">Os valores guiam a conduta de uma organização, quando planos de Missão e Visão estiverem em execução.
+							São inegociáveis, ditando comportamentos e atitudes no funcionamento de toda estrutura organizacional.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--localizacao-->
+	<div id="localizacao">
+		<!--Google map-->
+		<div class="col-md-12">
+			<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14701.388297448884!2d-43.18687326127986!3d-22.900565860238547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5e151c7217%3A0x7ffdf9c2fc30b97d!2sCentro%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1631126807930!5m2!1spt-BR!2sbr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+
+			<!--Google Maps-->
+		</div>
+	</div>
+	<!--localizacao-->
+
+	<!--footer-->
+	<footer class="row" id="rodape">
+		<div class="col-md-12">
+            <div class="col-md-4">
+				<div class="">
+					<h4 class="titu_direita">Newsletter</h4>
+					<div class="text-center">
+						<img src="https://img.icons8.com/ios/50/000000/email.png"/>
+					</div>	
+					<div class="caption">
+
+						
+
+					</div>
+					<form>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+  	<label class="form-label" for="form5Example2">Envie seu email</label>
+    <input type="email" id="form5Example2" class="form-control" />
+    
+  </div>
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-sm">Inscrever-se</button>
+</form>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="">
+					<h4 class="titu_direita">Redes sociais</h4>
+					<div class="text-center"><img src="https://img.icons8.com/ios/50/000000/facebook-f.png"/>
+					<img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"/>
+					<img src="https://img.icons8.com/ios/50/000000/linkedin-circled--v1.png"/>
+				    </div>
+
+					<div class="caption">
+
+						
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-md-4">
+				<div class="contato">
+					<h4 class="titu_direita">Contato</h4>
+					<div class="text-center"><img src="https://img.icons8.com/ios/50/000000/whatsapp.png"/></div>
+					<ul class="text-center">
+						<li>Whasapp:(21)89451-45454</li>
+						<li>Escritório:(21)454545-54545</li>
+						<li>Eamil:bemstar@gmail.com</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+		<div id="sandro" class="col-md-12 text-center"><span><a href="https://sandrodesigner.jimdo.com" target="_blank" title="Potifólio">Desenvolvedor Sandro Gomes</span></a></div>	
+	</footer>
+	
+
+</div>
+</body>
+</html>
